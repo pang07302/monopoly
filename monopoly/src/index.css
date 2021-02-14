@@ -1,0 +1,663 @@
+body {
+  margin: 0;
+  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
+    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
+    monospace;
+}
+
+/*Slidecontainer*/
+input[type="range"] {
+  -webkit-appearance: none; /*Clear the default style*/
+  background: #fff; /*Slider handle background*/
+  outline: 0;
+  height: 0.5vmin; /*Slidecontainer height*/
+  position: absolute;
+  left: 6%;
+  width: 75%;
+}
+
+/*Slider handle*/
+input[type="range"]::-webkit-slider-thumb {
+  -webkit-appearance: none; /*Clear the default style*/
+  height: 4vmin; /*Slider handle height*/
+  width: 4vmin;
+  background: #fff; /*Slider handle background*/
+  border-radius: 20%; /*Appearance is set to round*/
+}
+
+#menu {
+  /*background-color: #8c2621;*/
+  background-color: #6b0709;
+  width: 90vmin;
+  height: 100vmin;
+  position: absolute;
+}
+
+#settingMenu {
+  position: absolute;
+  height: 100%;
+  width: 100%;
+  display: none;
+}
+
+#menuText {
+  width: 100%;
+  position: absolute;
+  left: 0;
+  top: 13%;
+}
+
+#sbPlayer {
+  top: 29%;
+}
+
+#sbMoney {
+  top: 40.8%;
+}
+
+#sbMaxRound {
+  top: 52%;
+}
+
+#txPlayer {
+  position: absolute;
+  left: 85%;
+  top: 27.7%;
+  width: 10%;
+  height: 3%;
+}
+
+#txMoney {
+  position: absolute;
+  left: 85%;
+  top: 39.4%;
+  width: 10%;
+  height: 3%;
+}
+
+#txMaxRound {
+  position: absolute;
+  left: 85%;
+  top: 50.7%;
+  width: 10%;
+  height: 3%;
+}
+
+#sellProperty {
+  position: absolute;
+  left: 88%;
+  top: 56.5%;
+  width: 4%;
+  height: 4%;
+}
+
+#saveBtn {
+  height: 8vmin;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 75%;
+  transform: translate(-50%, -50%);
+}
+
+#gameDiv {
+  display: none;
+}
+
+#startBtn {
+  height: 15vmin;
+  width: auto;
+  position: absolute;
+  left: 50%;
+  top: 35%;
+  transform: translate(-50%, -50%);
+}
+
+#customizeBtn {
+  height: 15vmin;
+  width: auto;
+  left: 50%;
+  top: 65%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#background {
+  background-color: gray;
+  width: 100%;
+  height: 100%;
+  position: absolute;
+}
+
+#mapContainer {
+  /*background-color: blue;*/
+  width: 85vmin;
+  height: 85vmin;
+  margin-bottom: 1vmin;
+  position: relative;
+}
+
+#panel {
+  width: 85vmin;
+  height: 12vmin;
+  position: relative;
+}
+#panelImg {
+  height: 100%;
+  width: 100%;
+}
+
+.text {
+  margin: 0;
+  left: 50%;
+  top: 70%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 2.5vmin;
+  color: black;
+}
+
+#map {
+  height: 100%;
+  width: auto;
+}
+
+.player {
+  height: 6.5vmin;
+  width: auto;
+  margin: 0;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 3vmin;
+  z-index: 1;
+}
+
+#diceContainer {
+  /*background-color: pink;*/
+  height: 25%;
+  width: 40%;
+  position: absolute;
+  top: 65%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+}
+
+#goButton {
+  height: 15vmin;
+  width: auto;
+  margin: 0;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+.dice {
+  height: 15vmin;
+  width: auto;
+  margin: 0;
+  left: 50%;
+  top: 60%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  display: none;
+}
+
+#tip {
+  margin: 0;
+  font-size: 2.5vmin;
+  /*color: black;*/
+}
+
+#messageBox {
+  background-color: white;
+  height: 20%;
+  width: 60%;
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  display: none;
+}
+
+#noBtn {
+  height: 5vmin;
+  width: auto;
+  margin: 0;
+  left: 30%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#yesBtn {
+  height: 5vmin;
+  width: auto;
+  margin: 0;
+  left: 70%;
+  top: 80%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+}
+
+#message {
+  /*background: yellow;*/
+  margin: 0;
+  height: 60%;
+  width: 95%;
+  word-wrap: break-word;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  font-size: 2vmin;
+  color: black;
+}
+
+.flagBottom {
+  height: 11.1vmin;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%);
+  position: absolute;
+  z-index: 0;
+}
+
+.flagLeft {
+  height: 11.2vmin;
+  width: auto;
+  left: 51%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(90deg);
+  position: absolute;
+  z-index: 0;
+}
+
+.flagTop {
+  height: 11.1vmin;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(180deg);
+  position: absolute;
+  z-index: 0;
+}
+
+.flagRight {
+  height: 11.1vmin;
+  width: auto;
+  left: 50%;
+  top: 50%;
+  transform: translate(-50%, -50%) rotate(-90deg);
+  position: absolute;
+  z-index: 0;
+}
+
+#location0 {
+  height: 13.1%;
+  width: 13.1%;
+  position: absolute;
+  top: 86.9%;
+  left: 86.9%;
+}
+
+#location1 {
+  /*background-color: yellow;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 86.9%;
+  left: 78.6%;
+}
+
+#location2 {
+  /*background-color: purple;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 86.9%;
+  left: 70.6%;
+}
+
+#location3 {
+  /*background-color: yellow;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 86.9%;
+  left: 62.4%;
+}
+
+#location4 {
+  /*background-color: purple;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 86.9%;
+  left: 54.2%;
+}
+
+#location5 {
+  /*background-color: yellow;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 86.9%;
+  left: 46%;
+}
+
+#location6 {
+  /*background-color: purple;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 86.9%;
+  left: 37.8%;
+}
+
+#location7 {
+  /*background-color: yellow;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 86.9%;
+  left: 29.7%;
+}
+
+#location8 {
+  /*background-color: purple;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 86.9%;
+  left: 21.6%;
+}
+
+#location9 {
+  /*background-color: yellow;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 86.9%;
+  left: 13.5%;
+}
+
+#location10 {
+  /*background-color: red;*/
+  height: 13.1%;
+  width: 13.3%;
+  position: absolute;
+  top: 86.9%;
+  left: 0;
+}
+
+#location11 {
+  /*background-color: yellow;*/
+  height: 8%;
+  width: 13.3%;
+  position: absolute;
+  top: 78.7%;
+  left: 0;
+}
+
+#location12 {
+  /*background-color: green;*/
+  height: 8%;
+  width: 13.3%;
+  position: absolute;
+  top: 70.5%;
+  left: 0;
+}
+
+#location13 {
+  /*background-color: yellow;*/
+  height: 8%;
+  width: 13.3%;
+  position: absolute;
+  top: 62.3%;
+  left: 0;
+}
+
+#location14 {
+  /*background-color: green;*/
+  height: 8%;
+  width: 13.3%;
+  position: absolute;
+  top: 54.2%;
+  left: 0;
+}
+
+#location15 {
+  /*background-color: yellow;*/
+  height: 8%;
+  width: 13.3%;
+  position: absolute;
+  top: 46%;
+  left: 0;
+}
+
+#location16 {
+  /*background-color: green;*/
+  height: 8%;
+  width: 13.3%;
+  position: absolute;
+  top: 37.8%;
+  left: 0;
+}
+
+#location17 {
+  /*background-color: yellow;*/
+  height: 8%;
+  width: 13.3%;
+  position: absolute;
+  top: 29.6%;
+  left: 0;
+}
+
+#location18 {
+  /*background-color: green;*/
+  height: 8%;
+  width: 13.3%;
+  position: absolute;
+  top: 21.4%;
+  left: 0;
+}
+
+#location19 {
+  /*background-color: yellow;*/
+  height: 8%;
+  width: 13.3%;
+  position: absolute;
+  top: 13.2%;
+  left: 0;
+}
+
+#location20 {
+  /*background-color: red;*/
+  height: 13.1%;
+  width: 13.3%;
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+#location21 {
+  /*background-color: yellow;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 0;
+  left: 13.5%;
+}
+
+#location22 {
+  /*background-color: green;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 0;
+  left: 21.7%;
+}
+
+#location23 {
+  /*background-color: yellow;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 0;
+  left: 29.8%;
+}
+
+#location24 {
+  /*background-color: green;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 0;
+  left: 37.9%;
+}
+
+#location25 {
+  /*background-color: yellow;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 0;
+  left: 46.2%;
+}
+
+#location26 {
+  /*background-color: green;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 0;
+  left: 54.3%;
+}
+
+#location27 {
+  /*background-color: yellow;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 0;
+  left: 62.5%;
+}
+
+#location28 {
+  /*background-color: green;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 0;
+  left: 70.6%;
+}
+
+#location29 {
+  /*background-color: yellow;*/
+  height: 13.1%;
+  width: 8%;
+  position: absolute;
+  top: 0;
+  left: 78.8%;
+}
+
+#location30 {
+  /*background-color: red;*/
+  height: 13.1%;
+  width: 13.1%;
+  position: absolute;
+  top: 0;
+  left: 86.9%;
+}
+
+#location31 {
+  /*background-color: yellow;*/
+  height: 8%;
+  width: 13.1%;
+  position: absolute;
+  top: 13.3%;
+  left: 86.9%;
+}
+
+#location32 {
+  /*background-color: green;*/
+  height: 8%;
+  width: 13.1%;
+  position: absolute;
+  top: 21.5%;
+  left: 86.9%;
+}
+
+#location33 {
+  /*background-color: yellow;*/
+  height: 8%;
+  width: 13.1%;
+  position: absolute;
+  top: 29.7%;
+  left: 86.9%;
+}
+
+#location34 {
+  /*background-color: green;*/
+  height: 8%;
+  width: 13.1%;
+  position: absolute;
+  top: 37.9%;
+  left: 86.9%;
+}
+
+#location35 {
+  /*background-color: yellow;*/
+  height: 8%;
+  width: 13.1%;
+  position: absolute;
+  top: 46.1%;
+  left: 86.9%;
+}
+
+#location36 {
+  /*background-color: green;*/
+  height: 8%;
+  width: 13.1%;
+  position: absolute;
+  top: 54.3%;
+  left: 86.9%;
+}
+
+#location37 {
+  /*background-color: yellow;*/
+  height: 8%;
+  width: 13.1%;
+  position: absolute;
+  top: 62.4%;
+  left: 86.9%;
+}
+
+#location38 {
+  /*background-color: green;*/
+  height: 8%;
+  width: 13.1%;
+  position: absolute;
+  top: 70.6%;
+  left: 86.9%;
+}
+
+#location39 {
+  /*background-color: yellow;*/
+  height: 8%;
+  width: 13.1%;
+  position: absolute;
+  top: 78.8%;
+  left: 86.9%;
+}
